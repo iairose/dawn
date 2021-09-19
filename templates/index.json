@@ -101,6 +101,7 @@
     },
     "1632061630f6e9e45d": {
       "type": "collection-list",
+      "disabled": true,
       "blocks": {
         "1632061630f6e9e45d-0": {
           "type": "featured_collection",
@@ -186,6 +187,7 @@
     },
     "multi_column": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column1": {
           "type": "column",
