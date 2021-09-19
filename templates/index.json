@@ -187,7 +187,6 @@
     },
     "multi_column": {
       "type": "multicolumn",
-      "disabled": true,
       "blocks": {
         "column1": {
           "type": "column",
