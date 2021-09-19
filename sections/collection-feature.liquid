@@ -110,7 +110,29 @@
 
 .itemlist_subtitle{overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;}              
 </style>
-
+<script>
+ var swiper2 = new Swiper(".swiper_collection", {
+slidesPerView: "auto",  
+spaceBetween: 20,
+        centeredSlides: false,       
+        grabCursor: true,
+        keyboard: {
+          enabled: true,
+        },
+        breakpoints: {
+          769: {
+            slidesPerView: 5,
+            spaceBetween: 16,
+            slidesPerGroup: 2,
+          },
+        }, 
+    scrollbar: {
+         el: ".swiper-scrollbar",
+         draggable: true,
+         hide:true,
+       },
+      });   
+</script>
 
 
 {% schema %}
