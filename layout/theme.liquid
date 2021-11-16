@@ -125,7 +125,7 @@
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
  <meta name="facebook-domain-verification" content="aojo4of3ek11iw2xsy3qahes5h4rgv" />
-  </head>
+  {% include 'MonsterUpsell-shopify-prod-head' %}</head>
 
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -173,7 +173,7 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   {% include 'csl-cart-slide' %}
-</body>
+{% include 'MonsterUpsell-shopify-prod-body' %}</body>
 </html>
 <script>
  new WOW().init();
