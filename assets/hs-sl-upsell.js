@@ -1,1 +1,1 @@
-window.HSSLIDECART.dynamicUpsell = { json:[] }
+window.HSSLIDECART.dynamicUpsell = { json:[{"title":"test","status":"1","result":[6891680694451],"dynamic_upsell":["gastrointestinal-tract","hepatitis-infection"]}] }
