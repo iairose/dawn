@@ -228,6 +228,12 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+    },
+    "16381072130a6321b6": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Please Contact us for the real price"
+      }
     }
   },
   "order": [
@@ -239,6 +245,7 @@
     "1632061630f6e9e45d",
     "collage",
     "video",
-    "multi_column"
+    "multi_column",
+    "16381072130a6321b6"
   ]
 }
