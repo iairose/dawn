@@ -234,6 +234,11 @@
       "settings": {
         "heading": "Please Contact us for the real price"
       }
+    },
+    "alireviews-widget-115325": {
+      "type": "alireviews-widget-115325",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -246,6 +251,7 @@
     "collage",
     "video",
     "multi_column",
-    "16381072130a6321b6"
+    "16381072130a6321b6",
+    "alireviews-widget-115325"
   ]
 }
