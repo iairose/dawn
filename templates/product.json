@@ -84,10 +84,16 @@
         "show_vendor": false,
         "show_rating": false
       }
+    },
+    "alireviews-widget-115321": {
+      "type": "alireviews-widget-115321",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "product-recommendations"
+    "product-recommendations",
+    "alireviews-widget-115321"
   ]
 }
