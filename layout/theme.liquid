@@ -260,7 +260,7 @@ right: 0;
   })  
   
 
-if (readCookie("cookie_bar")) {
+if (getCookieValue("cookie_bar")) {
 	document.getElementById('#juncookiebar').style.display = 'none';  
    $("#juncookiebar").hide();
 
@@ -293,6 +293,11 @@ function hide(obj) {
 var el = document.getElementById(obj);
 	el.style.display = 'none';
 }
+    
+    
+    const getCookieValue = (name) => (
+  document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
+)
 </script>    
     
     
