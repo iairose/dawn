@@ -255,49 +255,41 @@ right: 0;
 
 
   $("#cookieaccept").click(function(){
-    createCookie('cookie_bar', true, 1000);
+    setCookie('cookie_bar','cookie_bar_val',7);
+    //createCookie('cookie_bar', true, 1000);
     $("#juncookiebar").hide();
   })  
   
 
-if (getCookieValue("cookie_bar")) {
+if (getCookie('cookie_bar')) {
 	document.getElementById('#juncookiebar').style.display = 'none';  
    $("#juncookiebar").hide();
 
 } 
-function createCookie(name,value,days) {
-  if (days) {
-	var date = new Date();
-	//date.setTime(date.getTime()+(days*24*60*60*1000));
-	date.setTime(date.getTime()+(days*60*1000));
-	var expires = "; expires="+date.toGMTString();
-  }
-  else var expires = "";
-  document.cookie = name+"="+value+expires+"; path=/";
-        //document.getElementById('sticky-bar').style.display = 'none';
-}
-function readCookie(name) {
-  var nameEQ = name + "=";
-  var ca = document.cookie.split(';');
-  for(var i=0;i < ca.length;i++) {
-	var c = ca[i];
-	while (c.charAt(0)==' ') c = c.substring(1,c.length);
-	if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-  }
-  return null;
-}
-function eraseCookie(name) {
-  createCookie(name,"",-1);
-}
-function hide(obj) {
-var el = document.getElementById(obj);
-	el.style.display = 'none';
-}
+   
     
-    
-    const getCookieValue = (name) => (
-  document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
-)
+    function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {   
+    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
 </script>    
     
     
