@@ -255,12 +255,12 @@ right: 0;
 
 
   $("#cookieaccept").click(function(){
-    createCookie('sticky-bar-cookie', true, 1000);
+    createCookie('cookie_bar', true, 1000);
     $("#juncookiebar").hide();
   });  
   
 
-if (readCookie("sticky-bar-cookie")) {
+if (readCookie("cookie_bar")) {
 	document.getElementById('#juncookiebar').style.display = 'none';  
    $("#juncookiebar").hide();
 
