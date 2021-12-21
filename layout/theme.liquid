@@ -197,6 +197,109 @@ right: 0;
       .cc-banner.cc-bottom,.cc-color-override--419732655.cc-window {background-color:#f3f3f3;}
     </style>
     
+    
+    
+    
+    
+    
+    
+    
+
+ <div id="juncookiebar">
+      <div class="juncookieinner"><div>This website uses cookies to ensure you get the best experience on our website.&nbsp;<a href="/pages/privacy-policy">Privacy Policy</a></div>
+      	<div class="juncookiebtn">
+<span id="cookieaccept" class="cookiebtn cookiebtn2">Accept</span>
+</div></div>
+
+
+
+</div>
+
+<style>
+  #juncookiebar{position:fixed;right:0;bottom:0;}
+  .juncookieinner{width:380px;background-color:#000000;color:white;padding:20px 30px;margin-right:30px;margin-bottom:30px;}
+  .juncookieinner div{display:block;}
+  #cookieaccept{text-decoration:underline;cursor:pointer;}
+  #juncookiebar a{color:#f3f3f3;}
+    .juncookiebtn{padding-top:20px;}
+  #juncookiebar a{text-decoration:underline;}
+  
+  @media(max-width:768px){
+  
+    .juncookieinner{width:100%;margin-right:0px;margin-bottom:0px;}
+  .juncookiebtn {
+    text-align: center;
+    margin-top: 20px;
+}
+#cookieaccept {
+   border: 1px solid;
+    width: 100%;
+    display: block;
+}    
+.juncookiebtn {
+    padding-top: 0px;
+}
+    #cookieaccept {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 3px 0;
+}
+    
+  }
+
+</style>
+
+
+  <script>
+// cookie banner  
+
+
+  $("#cookieaccept").click(function(){
+    createCookie('sticky-bar-cookie', true, 1000);
+    $("#juncookiebar").hide();
+  });  
+  
+
+if (readCookie("sticky-bar-cookie")) {
+	document.getElementById('#juncookiebar').style.display = 'none';  
+   $("#juncookiebar").hide();
+
+} 
+function createCookie(name,value,days) {
+  if (days) {
+	var date = new Date();
+	//date.setTime(date.getTime()+(days*24*60*60*1000));
+	date.setTime(date.getTime()+(days*60*1000));
+	var expires = "; expires="+date.toGMTString();
+  }
+  else var expires = "";
+  document.cookie = name+"="+value+expires+"; path=/";
+        //document.getElementById('sticky-bar').style.display = 'none';
+}
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+	var c = ca[i];
+	while (c.charAt(0)==' ') c = c.substring(1,c.length);
+	if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
+function eraseCookie(name) {
+  createCookie(name,"",-1);
+}
+function hide(obj) {
+var el = document.getElementById(obj);
+	el.style.display = 'none';
+}
+</script>    
+    
+    
+    
+    
+    
+    
 </body>
 </html>
 <script>
