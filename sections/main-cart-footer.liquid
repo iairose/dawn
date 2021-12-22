@@ -1,4 +1,4 @@
-{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+<script class="cartFlagX"></script>{{ 'component-cart.css' | asset_url | stylesheet_tag }}
 {{ 'component-totals.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
@@ -22,7 +22,7 @@
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div class="totals">
                   <h3 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h3>
-                  <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+                  <p class="totals__subtotal-value"><span style="display:none" class="tdf-cart-total-flag"></span>{{ cart.total_price | money_with_currency }}</p>
                 </div>
 
                 <div>
